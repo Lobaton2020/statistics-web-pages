@@ -10,9 +10,14 @@ function startApp() {
         app.use(express.json())
         app.use(cors())
         app.use(router)
-        app.listen(3000,()=>{
+        app.use('', (req, res) => {
+            res.json({
+                message: "Welcome to this API, for more info check GiTHIB Lobaton2020"
+            })
+        })
+        app.listen(8080, () => {
             resolve(true)
-            console.log("App running in port: 3000")
+            console.log("App running in port: 8080")
         })
     })
 }
