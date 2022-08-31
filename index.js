@@ -15,7 +15,7 @@ function startApp() {
                 message: "Welcome to this API, for more info check GiTHIB Lobaton2020"
             })
         })
-        app.listen(8080, () => {
+        app.listen(process.env.PORT || 80, () => {
             resolve(true)
             console.log("App running in port: 8080")
         })
